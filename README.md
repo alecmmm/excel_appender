@@ -1,10 +1,10 @@
 # excel_appender
-Script for combining tables in Excel workbooks
+Combines tables in Excel workbooks and CSVs
 
 How to Use:
     Run program. When prompted, select multiple files 
     with tables that you wish to append together. The 
-    tables will be appended onto eachother in one 
+    tables will be appended onto each other in one 
     workbook named appendedBook.xlsx, in the same 
     folder as the files you appended.
 
@@ -16,4 +16,4 @@ Requirements:
     5. If there is a workbook names appendedBook.xlsx in 
        the folder you're running it, it will be 
        overridden
-    6. Must have Tkinter for UI, pandas and xlwings
+    6. Must have TkInter, pandas and xlwings
