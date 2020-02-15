@@ -6,7 +6,10 @@ How to Use:
     with tables that you wish to append together. The 
     tables will be appended onto each other in one 
     workbook named appendedBook.xlsx, in the same 
-    folder as the files you appended.
+    folder as the files you appended. A rightmost 
+    column will be added, named "source_name". A 
+    worksheet will be created containing the names 
+    of all files that were appended, named "directory".
 
 Requirements:
     1. Data to be appended must be in the first worksheet
