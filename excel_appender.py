@@ -4,7 +4,7 @@ Spyder Editor
 
 Written by Alec McKay, September, 2019
 
-Script for combining tables in Excel workbooks.
+Script for combining tables in Excel or csv workbooks.
 
 How to Use:
     Run program. When prompted, select multiple files 
@@ -38,8 +38,7 @@ def open_files():
     #initiate UI
     root = Tk()
     
-    root.filename = filedialog.askopenfilenames(initialdir="/", title="Select file",
-                                               filetypes=(("Excel Files", "*.xlsx"), ("All Files", "*")))
+    root.filename = filedialog.askopenfilenames(initialdir="/", title="Select file")
     root.destroy()
     return root.filename
 
@@ -66,9 +65,19 @@ def append_books(filenames):
         
     directory = filenames[0][0: filenames[0].rfind('/')]
     
-    for file in filenames:
-        appendBook = appendBook.append(pd.read_excel(file,sheet_name=0, index=False, index_label=False))
     
+    for file in filenames:
+        
+        if(file[-3:len(file)] == 'xls' or file[-4:len(file)] == 'xlsx'):
+            appendBook = appendBook.append(pd.read_excel(file,sheet_name=0, index=False, index_label=False))
+            
+        elif(file[-3:len(file)] == 'csv'):
+            appendBook = appendBook.append(pd.read_csv(file))
+            
+        else:
+            display_message("Error", "only select files of the type xlsx, xls or csv.")
+            sys.exit("Wrong type of file appended")
+        
     try:
         #write dataframe into file
         appendBook.to_excel(directory + '\\appendedBook.xlsx')
