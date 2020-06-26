@@ -1,7 +1,7 @@
 # excel_appender
 Combines tables in Excel workbooks and CSVs
 
-How to Use:
+## How to Use
     Run program. When prompted, select multiple files 
     with tables that you wish to append together. The 
     tables will be appended onto each other in one 
@@ -11,7 +11,7 @@ How to Use:
     worksheet will be created containing the names 
     of all files that were appended, named "directory".
 
-Requirements:
+## Requirements
     1. Data to be appended must be in the first worksheet
     2. All data must have the same headers
     3. All workbooks must be in the same folder.
