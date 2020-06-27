@@ -12,7 +12,7 @@ The tables will be appended onto each other in one workbook named appendedBook.x
 
 A worksheet named "directory" will be created containing the names of all files that were appended.
 
-![appended files image](https://github.com/alecmmm/excel_appender/blob/master/images/directory.PNG "Appended files")
+![directory image](https://github.com/alecmmm/excel_appender/blob/master/images/directory.PNG "Directory")
 
 ## Requirements
 1. When appending Excel files, data must be in the first worksheet of the workbook
